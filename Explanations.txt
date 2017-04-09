@@ -1,0 +1,81 @@
+﻿Question 1:
+
+For this solution I chose to first define an anagram withing a helper function.
+I did this by using a list with both s1 and s2, sorting them, and setting them
+equal to one another. Then in the main function I chose to sort t and compare
+the sorted values of t with s incrementally so that if an anagram of t was in
+s it would be found.
+
+Complexity Analysis:
+O(n) where n is the anagram.
+Space Complexity Analysis:
+O(1)
+
+
+Question2:
+
+For this solution I decided to first define substrings and palindromes as
+helper functions for my main function. In substrings I chose to use range
+instead of xrange so that my code would be compatible across multiple versions
+of python. The main function simply checks for the palindrome “l” within the
+substring “a” and returns the value of l. When given a null value the function
+returns “None”. A palindrome as defined by my function will only return “None”
+if no value is given.
+
+Complexity Analysis:
+O(n^2) where n is the palindrome.
+Space Complexity Analysis:
+O(1)
+
+
+Question 3:
+
+Here I chose to use three helper functions: find, make, and union which
+I have simplified in my code for easier reading. I chose to use three helper
+functions so that I could neatly separate the different  actions I would need
+to do in order to create and view a graph. This way I have all of my
+necessary actions predefined so that writing the main function is less complex.
+Within the main function I chose to define edges as a list of all possible
+edges and the minimum spanning tree as a set of edges within that list. Then
+I define an individual edge as two vertices, if they are not equal to one
+another they are expressed within a union. When I call the main function my
+program first interprets the input and makes the vertices, then the edges are
+sorted by weight. I then check all edges to see if v1 is not equal to v2 and if
+they are not a union is made, this way I avoid cycling.
+
+Complexity Analysis:
+O(ELogV) where E is the number of edges, and V is the number of vertex
+Space Complexity Analysis:
+O(V + E)
+
+Question 4:
+
+Here I chose to use the four provided variables for Tree, root, n1 and n2. I
+stored n1 and n2 as a single list n. I then declared that the LCA had not been
+found so that I could create a loop until it is found. I chose to enumerate
+through tree so that I could extract tuple values for each node (index, value)
+Then I checked if a node was already the root, and if not I continued until a
+value was found for that node. If both nodes had the same value I declared that
+the LCA had been found.
+
+Complexity Analysis:
+O(nlogn) where n is the BST
+Space Complexity Analysis:
+O(1)
+
+Question 5:
+
+For this function I used the give Node close to define a node. I then
+created an add function so that I could manually add elements to the list
+rather than using a generator. I did this so I could predict my outcomes. For
+the main function I chose to set the starting element as the current node
+(set at 0), then I chose to use loop to walk through the list until the end
+was reached. Both element1 (starting from the head) and element2 (starting from
+the tail) traverse the list until element2 is m steps from the end. To test my
+function I chose to set m as an integer value. When my function is called and m
+is passed to it, the list is traversed until c is equal to the value of m.
+
+Time Complexity Analysis:
+O(n) where n is the linked list
+Space Complexity Analysis:
+O(1)
